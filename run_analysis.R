@@ -49,4 +49,4 @@ melt_data <- melt(merge_data, id = c("subject", "id", "activity"))
 # Appling mean function to the dataset
 tidy_data <- dcast(melt_data, subject + activity ~ variable, mean)
 
-write.csv(tidy_data, "tidy_data.csv")
+write.table(tidy_data, "tidy_data.txt", row.names = F)
